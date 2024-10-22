@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift for You Maria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000; /* Black background */
+            font-family: 'Great Vibes', cursive; /* Victorian-style font */
+            color: #fff; /* White text */
+            text-align: center;
+            overflow: hidden; /* Prevent scrolling */
+        }
+        h1 {
+            font-size: 3.5em; /* Increased size for the main message */
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+            margin-top: 20px; /* Space from the top */
+        }
+        .love-message {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            max-width: 80%; /* Limit width for better readability */
+            margin-top: 30px; /* Space between messages */
+        }
+        .message {
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+            margin: 5px;
+            color: #e63946; /* Red color */
+        }
+    </style>
+</head>
+<body>
+    <h1>I am in love with you, Maria</h1>
+    <div class="love-message" id="loveMessages"></div>
+
+    <script>
+        const messages = [
+            "I love you",                   // English
+            "Je t'aime",                    // French
+            "Te amo",                       // Spanish
+            "Ich liebe dich",               // German
+            "Ti amo",                       // Italian
+            "Eu te amo",                    // Portuguese
+            "Amo-te",                       // Portuguese (European)
+            "أحبك",                          // Arabic
+            "मैं तुमसे प्यार करता हूँ",      // Hindi
+            "私はあなたを愛しています",        // Japanese
+            "사랑해요",                      // Korean
+            "Jeg elsker dig",               // Danish
+            "Ja elsker deg",                // Norwegian
+            "Jag älskar dig",               // Swedish
+            "Ik hou van jou",               // Dutch
+            "Я тебя люблю",                 // Russian
+            "Kocham cię",                   // Polish
+            "Te iubesc",                    // Romanian
+            "Minä rakastan sinua",          // Finnish
+            "Sa iubesc",                    // Romanian
+            "Mo ghrá thú",                  // Irish
+            "Aš tave myliu",                // Lithuanian
+            "Ngiyakuthanda",                // Zulu
+            "Ngā ahau e aroha",             // Māori
+            "Mi amas vin",                  // Esperanto
+            "Lub masz kuv",                 // Hmong
+            "Ik ben verliefd op jou",       // Dutch (variant)
+            "Serce mego serca",             // Polish (phrase)
+            "Nhân sinh là gì",              // Vietnamese
+            "Quero você",                   // Portuguese (phrase)
+            "Te quiero",                    // Spanish (phrase)
+            "Ek is lief vir jou",           // Afrikaans
+            "Rwy'n dy garu di",             // Welsh
+            "Amo tutus",                    // Latin
+            "Agă nu le mai pot",            // Romanian (variant)
+            "Sungka sayang",                // Malay
+            "Du er min elskede",            // Danish (phrase)
+            "Ts’ugay",                      // Chuvash
+            "Wanta na",                     // Italian (phrase)
+            "Wanna di ho",                  // Punjabi
+            "Ngiyakuthanda",                // Xhosa
+            "Gusto kita",                   // Filipino
+            "Tas vērsties",                 // Latvian
+            "Amo sua",                      // Italian (variant)
+            "Să te iubesc",                 // Romanian (phrase)
+            "Я люблю тебя",                 // Russian (variant)
+            "Ik ben gek op je",             // Dutch (variant)
+            "Gustaríe te",                  // Galician
+            "Ich hab dich lieb",            // German (variant)
+            "Mi piensas",                   // Spanish (phrase)
+            "Je t’adore",                   // French (variant)
+            "Sa lavakar",                   // Fijian
+            "Amo vos",                      // Spanish (variant)
+            "I love you too",               // English (phrase)
+            "Ik hou van je",                // Dutch (phrase)
+            "Te quiero mucho",              // Spanish (phrase)
+            "Amo-te muito",                 // Portuguese (phrase)
+            "Cien aúche",                   // Aragonese
+            "Gusto ko ikaw",                // Filipino (phrase)
+            "Mahal kita",                   // Filipino (phrase)
+            "Te iubesc mult",               // Romanian (phrase)
+            "Je vous aime",                 // French (formal)
+            "Ik ben dol op jou",            // Dutch (phrase)
+            "Tū te piri ki te tītaha"      // Māori (phrase)
+        ];
+
+        const loveMessagesDiv = document.getElementById('loveMessages');
+
+        messages.forEach((message, index) => {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'message';
+            msgDiv.textContent = message;
+
+            // Random size between 15px and 35px for better visibility
+            const randomSize = Math.floor(Math.random() * 21) + 15; 
+            msgDiv.style.fontSize = `${randomSize}px`;
+
+            // Unique styles based on index
+            msgDiv.style.fontStyle = index % 2 === 0 ? 'italic' : 'normal'; // Italic for even indices
+            msgDiv.style.fontWeight = index % 3 === 0 ? 'bold' : 'normal';  // Bold for every third index
+            msgDiv.style.textDecoration = index % 5 === 0 ? 'underline' : 'none'; // Underline for multiples of 5
+
+            loveMessagesDiv.appendChild(msgDiv);
+        });
+    </script>
+</body>
+</html>
